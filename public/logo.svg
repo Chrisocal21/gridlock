@@ -1,0 +1,108 @@
+<svg width="1400" height="400" viewBox="0 0 1400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Shadow filter for 3D text effect -->
+    <filter id="textShadow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="0" dy="6" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.4"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Icon Square -->
+  <g id="icon">
+    <!-- Background with rounded corners -->
+    <rect x="40" y="50" width="300" height="300" rx="55" fill="#f0f4f8"/>
+    
+    <!-- Outer border -->
+    <rect x="40" y="50" width="300" height="300" rx="55" fill="none" stroke="#2d3d52" stroke-width="10"/>
+    
+    <!-- Inner white border -->
+    <rect x="58" y="68" width="264" height="264" rx="45" fill="none" stroke="white" stroke-width="6"/>
+    
+    <!-- Grid sections inside -->
+    <!-- Top-left: Blue water -->
+    <path d="M 100 110 L 100 180 L 170 180 L 170 110 Z" fill="#5d9da8"/>
+    
+    <!-- Top-center: Vertical road -->
+    <rect x="170" y="110" width="60" height="180" fill="#5a6370"/>
+    <line x1="200" y1="110" x2="200" y2="290" stroke="white" stroke-width="2.5" stroke-dasharray="8,6"/>
+    
+    <!-- Top-right: Green space -->
+    <path d="M 230 110 L 230 180 L 300 180 L 300 110 Z" fill="#8fa688"/>
+    
+    <!-- Middle: Horizontal road -->
+    <rect x="100" y="180" width="200" height="60" fill="#5a6370"/>
+    <line x1="100" y1="210" x2="300" y2="210" stroke="white" stroke-width="2.5" stroke-dasharray="8,6"/>
+    
+    <!-- Bottom-left: Teal ocean -->
+    <path d="M 100 240 L 100 290 L 170 290 L 170 240 Z" fill="#4a7c8a"/>
+    
+    <!-- Bottom-right: Orange commercial -->
+    <path d="M 230 240 L 230 290 L 300 290 L 300 240 Z" fill="#e8b86d"/>
+    
+    <!-- Center lock icon -->
+    <g transform="translate(200, 210)">
+      <!-- Lock body -->
+      <rect x="-22" y="-8" width="44" height="38" rx="6" fill="#f59e0b"/>
+      <rect x="-20" y="-6" width="40" height="34" rx="5" fill="#fbbf24"/>
+      
+      <!-- Keyhole -->
+      <circle cx="0" cy="6" r="6" fill="#2d3d52"/>
+      <rect x="-3" y="6" width="6" height="12" fill="#2d3d52"/>
+      
+      <!-- Lock shackle -->
+      <path d="M -14 -8 L -14 -20 Q -14 -30 0 -30 Q 14 -30 14 -20 L 14 -8" 
+            stroke="#2d3d52" stroke-width="5" fill="none" stroke-linecap="round"/>
+    </g>
+    
+    <!-- Subtle inner shadow on icon -->
+    <rect x="58" y="68" width="264" height="264" rx="45" fill="url(#iconGradient)" opacity="0.15"/>
+    <linearGradient id="iconGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#000000;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.1" />
+    </linearGradient>
+  </g>
+  
+  <!-- GRIDLOCK Text -->
+  <g id="text" filter="url(#textShadow)">
+    <!-- Bottom shadow layer (light) -->
+    <text x="380" y="256" font-family="Arial Black, sans-serif" font-size="160" font-weight="900" fill="#a8b8cc">
+      GRIDL
+    </text>
+    <text x="1000" y="256" font-family="Arial Black, sans-serif" font-size="160" font-weight="900" fill="#a8b8cc">
+      CK
+    </text>
+    
+    <!-- Main text -->
+    <text x="380" y="250" font-family="Arial Black, sans-serif" font-size="160" font-weight="900" fill="#1e293b">
+      GRIDL
+    </text>
+    <text x="1000" y="250" font-family="Arial Black, sans-serif" font-size="160" font-weight="900" fill="#1e293b">
+      CK
+    </text>
+    
+    <!-- Lock replacing O -->
+    <g transform="translate(920, 180)">
+      <!-- Lock body circle background -->
+      <circle cx="0" cy="0" r="75" fill="#fbbf24"/>
+      <circle cx="0" cy="0" r="70" fill="#f59e0b"/>
+      
+      <!-- Keyhole -->
+      <circle cx="0" cy="8" r="16" fill="#1e293b"/>
+      <rect x="-8" y="8" width="16" height="28" rx="2" fill="#1e293b"/>
+      
+      <!-- Lock shackle -->
+      <path d="M -36 0 L -36 -28 Q -36 -52 0 -52 Q 36 -52 36 -28 L 36 0" 
+            stroke="#1e293b" stroke-width="14" fill="none" stroke-linecap="round"/>
+      
+      <!-- Highlight on lock -->
+      <circle cx="-15" cy="-15" r="12" fill="white" opacity="0.3"/>
+    </g>
+  </g>
+</svg>

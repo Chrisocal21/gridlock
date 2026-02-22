@@ -1,0 +1,46 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="512" height="512" fill="#3b82f6"/>
+  
+  <!-- Grid pattern representing city blocks -->
+  <g fill="#ffffff" opacity="0.9">
+    <!-- Buildings/blocks -->
+    <rect x="80" y="120" width="80" height="120" rx="4"/>
+    <rect x="180" y="80" width="80" height="160" rx="4"/>
+    <rect x="280" y="140" width="80" height="100" rx="4"/>
+    <rect x="80" y="260" width="80" height="100" rx="4"/>
+    <rect x="180" y="260" width="80" height="140" rx="4"/>
+    <rect x="280" y="260" width="80" height="80" rx="4"/>
+    <rect x="380" y="180" width="60" height="120" rx="4"/>
+    <rect x="380" y="320" width="60" height="80" rx="4"/>
+  </g>
+  
+  <!-- Windows on buildings -->
+  <g fill="#3b82f6" opacity="0.4">
+    <!-- Grid 1 windows -->
+    <rect x="95" y="140" width="15" height="15"/>
+    <rect x="125" y="140" width="15" height="15"/>
+    <rect x="95" y="170" width="15" height="15"/>
+    <rect x="125" y="170" width="15" height="15"/>
+    
+    <!-- Grid 2 windows -->
+    <rect x="195" y="100" width="15" height="15"/>
+    <rect x="225" y="100" width="15" height="15"/>
+    <rect x="195" y="130" width="15" height="15"/>
+    <rect x="225" y="130" width="15" height="15"/>
+    <rect x="195" y="160" width="15" height="15"/>
+    <rect x="225" y="160" width="15" height="15"/>
+    
+    <!-- Grid 3 windows -->
+    <rect x="295" y="160" width="15" height="15"/>
+    <rect x="325" y="160" width="15" height="15"/>
+    <rect x="295" y="190" width="15" height="15"/>
+    <rect x="325" y="190" width="15" height="15"/>
+  </g>
+  
+  <!-- Road at bottom -->
+  <rect x="60" y="420" width="400" height="40" fill="#6b7280" rx="2"/>
+  <line x1="100" y1="440" x2="140" y2="440" stroke="#ffffff" stroke-width="2" stroke-dasharray="20,20" opacity="0.5"/>
+  <line x1="200" y1="440" x2="240" y2="440" stroke="#ffffff" stroke-width="2" stroke-dasharray="20,20" opacity="0.5"/>
+  <line x1="300" y1="440" x2="340" y2="440" stroke="#ffffff" stroke-width="2" stroke-dasharray="20,20" opacity="0.5"/>
+</svg>
