@@ -31,7 +31,6 @@ const drawBuildingIcon = (
   const centerX = x + width / 2;
   const centerY = y + height / 2;
   const iconScale = Math.min(width, height) / 48; // Scale based on tile size
-  const lineWidth = Math.max(0.5, 1 / zoom);
   
   ctx.save();
   ctx.translate(centerX, centerY);
@@ -863,7 +862,6 @@ export default function GameCanvas({ roadShape }: GameCanvasProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [zoom, setZoom] = useState(1);
   const [offset, setOffset] = useState({ x: 0, y: 0 });
-  const [isDragging, setIsDragging] = useState(false);
   const [isPanning, setIsPanning] = useState(false);
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
   const [touchStartTime, setTouchStartTime] = useState(0);
@@ -1580,7 +1578,6 @@ export default function GameCanvas({ roadShape }: GameCanvasProps) {
 
     if (e.touches.length === 1) {
       const touch = e.touches[0];
-      const gridPos = screenToGrid(touch.clientX, touch.clientY);
       const holdDuration = Date.now() - touchStartTime;
       
       // Calculate movement distance
@@ -1662,7 +1659,6 @@ export default function GameCanvas({ roadShape }: GameCanvasProps) {
       }
     }
 
-    setIsDragging(false);
     setIsPanning(false);
     setInitialPinchDistance(null);
     setInitialPinchCenter(null);

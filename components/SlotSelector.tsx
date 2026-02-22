@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { useGameStore } from '@/store/gameStore';
 
 interface SaveSlotData {
@@ -44,10 +45,13 @@ export default function SlotSelector({ onSlotSelected }: { onSlotSelected: () =>
       <div className="max-w-2xl w-full">
         {/* Header */}
         <div className="text-center mb-12">
-          <img 
+          <Image 
             src="/logo.svg" 
             alt="Gridlock" 
+            width={600}
+            height={200}
             className="w-full max-w-xl mx-auto mb-6"
+            priority
           />
           <p className="text-slate-400 text-lg">Select your city</p>
         </div>
